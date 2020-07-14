@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our Travel Log</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!--Header-->
+            <div id="home" class="jumbotron">
+                <h1>Our Travel Log</h1>
+                <p>Welcome to my journey!</p>
+            </div>
+            <!--Navigasi-->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#wisata">Wisata</a></li>
+                    <li><a href="#kuliner">Kuliner</a></li>
+                    <input type="text" class="from-control" placeholder="cari.." name="search">
+                    <button class="search-btn" type="submit">Telusuri</button>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!--Slide Show-->
+            <div class="container">
+                    <!--Gambar Slide Show-->
+                    <div class="inner">
+                        <div class="item" style="display: block">
+                            <img src="lostcastle.jpg" alt="Mockup" style="width:100%">
+                            <div class="text">The Lost World Castle, Yogyakarta</div>
+                        </div>
+                        <div class="item">
+                            <img src="museummerapi.jpg" alt="Mockup" style="width:100%">
+                            <div class="text">Museum Gunung Merapi, Yogyakarta</div>
+                        </div>
+                        <div class="item">
+                            <img src="merapipark.jpg" alt="Mockup" style="width:100%">
+                            <div class="text">Merapi Park, Yogyakarta</div>
+                        </div>
+                    </div>
+
+                    <!--Panah-->
+                    <a class="prev" href="#prev" onclick="plusSlides(-1)">
+                        &#10094;
+                        <span style="color: black" class="control-prev-icon"></span>
+                    </a>
+                    <a class="next" href="#next" onclick="plusSlides(1)">
+                        &#10095;
+                        <span style="color: black" class="control-next-icon"></span>
+                    </a>
+
+                    <!--Dot-->
+                    <div style="text-align:center">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Konten Wisata-->
+            <div id="content" style="font-family: 'Sarabun', sans-serif">
+                <article id="wisata" class="kotak">
+                    <div class="tengah"><h1 style="background-color: hsl(43, 74%, 49%, 0.3)">&mdash; Wisata &mdash;</h1></div>
+
+                        <!--Lost World Castle-->
+                        <section class="container-content">
+                            <h3>The Lost World Castle</h3>
+                                <img src="lostcastle.jpg" alt="lost-castle" width="300 px" height="200 px" 
+                                style="float: left; margin-right: 10px; margin-bottom: 5px; border: solid black 1px; padding: 2px;">
+                            <p><strong>Lost World Castle (TLWC)</strong>, merupakan wisata baru di lereng Gunung Merapi tepatnya di Kepuharjo Cangkringan. TLWC memiliki bangunan yang dibuat mirip dengan Benteng Takeshi.
+                                <span id="dotsContent1">...</span><span id="moreContent1"> Untuk dapat menikmati spot foto di TLWC, pengunjung dikenakan tiket mulai Rp30.000. 
+                                Biaya tersebut dikenakan per orang, baik dewasa maupun anak – anak. The Lost World Castle Jogja buka setiap hari. Hari Senin sampai Jumat, buka sejak pukul 7 pagi dan tutup 6 sore.
+                                Sementara untuk hari Sabtu dan Minggu, buka pukul 6 pagi sampai 6 sore.<br>
+                                <strong>Sumber:</strong> <i>https://travelspromo.com/htm-wisata/the-lost-world-castle-yogya</i></span></p>
+                            <button onclick="btnFunction1()" id="myBtn1">Baca selengkapnya</button>
+                        </section>
+
+                        <!--Museum Gunung Merapi-->
+                        <section class="container-content">
+                            <h3>Museum Gunung Merapi</h3>
+                                <img src="museummerapi.jpg" alt="museum-merapi" width="300 px" height="200 px" 
+                                style="float: left; margin-right: 10px; margin-bottom: 5px; border: solid black 1px; padding: 2px;">
+                            <p><strong>Museum Gunung Merapi (MGM)</strong>, merupakan museum bersejarah yang dapat dijadikan sebagai sarana pendidikan, penyebarluasan informasi aspek kegunungapian khususnya dan kebencanaan geologi lainnya yang bersifat rekreatif-edukatif 
+                                untuk masyarakat luas <span id="dotsContent2">...</span><span id="moreContent2"> Lokasi MGM terletak di kawasan lereng Merapi, tepatnya di Jalan Boyong, Dusun Banteng, Desa Hargobinangun Kecamatan Pakem Kabupaten Sleman. Untuk menikmati wisata edukasi ini,
+                                pengunjung dikenakan tiket masuk sebesar Rp 5.000,- per orang untuk wisatawan lokal.<br>
+                                <strong>Sumber:</strong> <i>http://mgm.slemankab.go.id/</i></span></p>
+                            <button onclick="btnFunction2()" id="myBtn2">Baca selengkapnya</button>
+                        </section>
+                </article>
+
+                <!--Konten Kuliner-->
+                <article id="kuliner" class="kotak">
+                    <div class="tengah"><h1 style="background-color: hsl(43, 74%, 49%, 0.3)">&mdash; Kuliner &mdash;</h1></div>
+                    
+                    <!--Ketoprak Toserba Berkah-->
+                    <section class="container-content">
+                        <h3>Ketoprak Toserba Berkah, Rawamangun</h3>
+                            <img src="ketoprak.jpg" alt="ketoprak" width="300 px" height="200 px"
+                            style="float: left; margin-right: 10px; margin-bottom: 5px; border: solid black 1px; padding: 2px;">              
+                        <p><strong>Ketoprak</strong>, merupakan makanan khas Cirebon. Namun makanan ini dapat didapatkan di berbagai daerah salah satunya di daerah DKI Jakarta.<span id="dotsContent3">...</span>
+                            <span id="moreContent3"> Salah satu yang terkenal adalah ketoprak di depan toserba Berkah di Pulo Asem, Jakarta Timur. Untuk menikmatinya, 1 porsi diberandol dengan harga Rp 14.000,-.</span></p>
+                            <button onclick="btnFunction3()" id="myBtn3">Baca selengkapnya</button>
+                    </section>
+
+                    <!--Sop Konro Bakar Maranu-->
+                    <section class="container-content">
+                        <h3>Sop Konro Bakar Maranu, Kelapa Gading</h3>
+                            <img src="sopkonro.jpg" alt="sop-konro" width="300 px" height="200 px"
+                            style="float: left; margin-right: 10px; margin-bottom: 5px; border: solid black 1px; padding: 2px;">
+                        <p><strong>Sop Konro Bakar</strong>, merupakan makanan andalan dari rumah makan ini. Selain makanan ini, di rumah makan tersebut menyediakan makanan khas Makassar lainnya, yakni
+                            coto makassar, sop konro biasa, nasi goreng, dsb.<span id="dotsContent4">...</span>
+                            <span id="moreContent4"> Selain itu, terdapat berbagai macam es yang dapat dinikmati pembeli. Salah satunya adalah es pisang ijo.</span></p>
+                            <button onclick="btnFunction4()" id="myBtn4">Baca selengkapnya</button>
+                    </section>
+                </article>
+            </div>
+            
+            <!--Identitas Diri-->
+            <aside>
+                <article class="profile box">
+                    <header>
+                        <h2>This is Me!</h2>
+                            <img src="profil.jpg" class="rounded" style="width: 200px;height: 200px">
+                    </header>
+                    <section>
+                        <h3 style="text-align: center">&bull; Profil &bull;</h3>
+                        <table>
+                            <tr>
+                                <th>Nama</th>
+                                <td>Elyssa Ridhaningrum</td>
+                            </tr>
+                            <tr>
+                                <th>E-mail</th>
+                                <td>ningrumridha@gmail.com</td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </aside>
+
+            <!--Muncul dan Hilangkan Gambar-->
+            <aside class="gambar">
+                <h4 style="text-align: center">&bull; Candi Peninggalan Sejarah &bull;</h4>
+                <button id="fadein" style="display: block;margin: auto">Munculkan</button>
+                <button id="fadeout" style="display: block;margin: auto">Hilangkan</button>
+                <div id="div1">
+                    <img src="1.jpg" style="width:250px;height:250px;display: block;margin: auto">
+                    <div class="gambar-text">Candi Sojiwan, Klaten</div>
+                </div>
+                <div id="div2">
+                    <img src="2.jpg" style="width:250px;height:250px;display: block;margin: auto">
+                    <div class="gambar-text">Candi Barong, Yogyakarta</div>
+                </div>
+                <div id="div3">
+                    <img src="3.jpg" style="width:250px;height:250px;display: block;margin: auto">
+                    <div class="gambar-text">Candi Plaosan Lor, Klaten</div>
+                </div>
+            </aside>
+        </main>
+    
+    <!--Footer-->
+    <footer>
+        <table>
+        <tr>
+            <th style="color: goldenrod"><i><strong><h1>Our Travel</h1></strong></i></td>
+            <th colspan="20">Contact</th>
+            <th></th>
+            <th colspan="20">Connect me</th>
+	   </tr>
+	   <tr>
+           <td></td>
+           <td colspan="20">ningrumridha@gmail.com</ningrumridha@gmail></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td><a href="https://www.linkedin.com/in/elyssa-ridhaningrum-44a44a171/">LinkedIn</a></td>
+	   </tr>
+	</table>
+        <p>&#169 2020 by ourtravel</p>
+    </footer>
+    </body>
+</html>
