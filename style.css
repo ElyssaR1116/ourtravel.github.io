@@ -1,0 +1,302 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+/* Jumbotron */
+.jumbotron
+    {
+        font-size: 17px;
+        font-family: 'Cinzel Decorative', cursive;
+        padding: 5px;
+        background-color: black;
+        text-align: center;
+        color: white;
+    }
+
+/* Header */
+header
+    {
+        display: inline;
+    }
+
+/* Body */
+body
+    {
+        margin: 0;
+        padding: 0;
+        background: url("background.jpg") fixed;
+        background-size: cover;
+    }
+
+/* Navigasi */
+nav
+    {
+        background-color: black;
+        padding: 1px;
+        position: sticky;
+        top: 0;
+    }
+
+    nav a
+    {
+        float: left;
+        display: block;
+        padding: 7px 10px;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+    }
+
+/* Search */
+nav input[type=text]
+    {
+        float: left;
+        padding: 3px;
+        border: none;
+        margin-top: 8px;
+        margin-left: 40%;
+        font-size: 15px;
+      }
+      
+nav button
+    {
+        padding: 3px 6px;
+        margin-top: 8px;
+        margin-left: 2%;
+        background: #ddd;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        float: left;
+      }
+    
+@media screen and (max-width: 1000px) 
+      {
+          nav a, nav input[type=text], nav button
+          {
+              float: none;
+              display: inline;
+              text-align: left;
+              margin: 1px;
+              padding: 3px;
+          }
+          nav input[type=text]
+          {
+              border: 1px solid #ccc;
+          }
+      }
+
+nav a:hover
+    {
+        background-color: red;
+        font-weight: bold;
+    }
+
+nav button:hover {
+        background: #ccc;
+      }
+
+nav li
+    {
+        display: inline;
+        list-style-type: none;
+        margin-right: 15px;
+    }
+
+/* Main */
+main
+    {
+        overflow: auto;
+    }
+
+/* Konten */
+#content
+    {
+        float: left;
+        width: 75%;
+    }
+
+/* Gambar Slide Show*/
+.container
+    {
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+    }
+
+.inner img
+    {
+        width: 225px;
+        height: 470px;
+    }
+
+.item
+    {
+        display: none;
+    }
+
+.prev, .next
+    {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        width: auto;
+        margin-top: -22px;
+        padding: 10px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.5s ease;
+        border-radius:0 3px 3px 0;
+        user-select: none;
+    }
+
+.next 
+    {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+.prev:hover, .next:hover 
+    {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+.text 
+    {
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        padding: 15px 12px;
+        position: absolute;
+        bottom: 21px;
+        width: 100%;
+        text-align: center;
+    }
+
+.dot 
+    {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0 1px;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+    }
+
+.active, .dot:hover 
+    {
+        background-color: #717171;
+    }
+
+/* Artikel */
+.kotak 
+    {
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+     }
+
+/* Section */
+.container-content
+     {
+         width: 100%;
+         overflow: auto;
+         padding: 0% 9% 2.5% 2%;
+     }
+
+.container-img 
+    {
+        float: none;
+    }
+
+.tengah
+    {
+        text-align: center;
+    }
+/* Baca selengkapnya */
+#moreContent1, #moreContent2, #moreContent3, #moreContent4
+    {
+        display: none;
+    }
+
+/* Aside */
+aside
+    {
+        float: right;
+        width: 20%;
+        padding: 0% 1% 1% 1%;
+        font-family: 'Sarabun', sans-serif;
+    }
+
+/* Aside Identitas Diri */
+.rounded
+    {
+        display: block;
+        margin: auto;
+        border-radius: 100%;
+    }
+
+*   {
+        box-sizing: border-box;
+    }
+
+.profile header
+    {
+        text-align: center;
+    }
+
+.box
+    {
+        margin-top: 20px;
+        padding: 2px 5px 2px 5px;
+        background-color: hsl(43, 74%, 49%, 0.2);
+        border-radius: 10px;
+    }
+
+/* Aside Muncul-Hilangkan Gambar */
+.gambar
+    {
+        margin-top: 0.5%;
+    }
+
+.gambar-text
+    {
+        font-size: 15px;
+        color: black;
+        text-align: center;
+    }
+
+@media all and (max-width: 1000px) 
+    {
+        #content, aside 
+        {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+/* Footer */
+footer
+    {
+        padding: 0.1px;
+        color: white;
+        background-color: black;
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+
+footer a
+    {
+        color: white;
+    }
+
+footer a:hover
+    {
+        color: goldenrod
+    }
